@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ExhibitionApp</title>
+    <title>PhotoUp! -フォタップ- </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,9 +10,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+    
+
   </head>
 
-  <body class="bg-dark">
+  <body>
+    <%= render 'shared/header' %>
     <%= yield %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
