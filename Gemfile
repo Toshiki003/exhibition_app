@@ -32,6 +32,7 @@ gem 'enum_help'
 gem 'rails-i18n'
 
 gem 'sorcery', '0.16.4'
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

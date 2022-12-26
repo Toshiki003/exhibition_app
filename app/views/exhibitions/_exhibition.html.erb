@@ -1,0 +1,23 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="board-id-<%= exhibition.id %>">
+    <div class="card">
+      <%= image_tag 'rabit.png', class: 'card-img-top', size: '300x200' %>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a href="#">
+            <%= exhibition.title %>
+          </a>
+        </h4>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <%= exhibition.user.name %>
+          </li>
+          <li class="list-inline-item">
+            <%= l exhibition.created_at, format: :long %>
+          </li>
+        </ul>
+        <p class="card-text"><%= exhibition.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
