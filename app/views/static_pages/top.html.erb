@@ -19,7 +19,7 @@
           <h3>写真1枚から始めるオンライン個展</h3>
           <p>スマートフォンに撮りためた写真。”オンライン個展”で飾ってみませんか？</p>
           <%# <p>ううううーーーーーん、あと一文なんか欲しいです。</p> %>
-          <a href="contact.html" class="btn-get-started">個展を見る</a>
+          <%= link_to '個展を見る', exhibitions_path, class:"btn-get-started" %>
         </div>
       </div>
     </div>
@@ -28,6 +28,7 @@
   <main id="main" data-aos="fade" data-aos-delay="1500">
 
     <!-- ======= Gallery Section ここを個展から一つ目の写真を引っ張ってきてrenderで回す======= -->
+    <p class="new_exhibition">新着の個展</p>
     <section id="gallery" class="gallery">
       <div class="container-fluid">
 

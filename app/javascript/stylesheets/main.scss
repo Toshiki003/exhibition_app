@@ -18,7 +18,7 @@
 
 /* Colors */
 :root {
-  --color-default: #fafafa;
+  --color-default: #020202;
   --color-primary: #27a776;
   --color-secondary: #161718;
 }
@@ -34,7 +34,7 @@
 body {
   font-family: var(--font-default);
   color: var(--color-default);
-  background-color:  #efc20b;
+  background-color:  #794ac9;
 }
 
 a {
@@ -1332,4 +1332,10 @@ h6 {
   @media screen and (max-width: 767px) {
     font-size: 2.0rem;
   }
+}
+
+.new_exhibition {
+  position: relative;
+  font-size: 2rem;
+  color: white;
 }
