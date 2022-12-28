@@ -22,6 +22,8 @@ class ExhibitionsController < ApplicationController
   def show
     @exhibition = current_user.exhibitions.find(params[:id])
     # ここに@workも作って見られるようにする
+    @work = Work.new
+    @works = @exhibition.works.includes(:user)
   end
 
   def my_exhibition
