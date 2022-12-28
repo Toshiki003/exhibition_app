@@ -10,12 +10,17 @@ class ExhibitionsController < ApplicationController
   end
 
   def create
-    @exhibition = Exhibition.new(exhibition_params)
+    @exhibition = current_user.exhibitions.build(exhibition_params)
     if @exhibition.save
       redirect_to my_exhibition_exhibitions_path, success: "個展を開催しました！"
     else
+      flash.now[:danger] = "個展を開くことができませんでした"
       render :new
     end
+  end
+
+  def show
+    @exhibition = current_user.exhibitions.find(params[:id])
   end
 
   def my_exhibition
