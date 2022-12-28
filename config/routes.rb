@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     collection do
       get :my_exhibition
     end
+    resources :works, only: %i[create],shallow: true
   end
 
 end
