@@ -8,6 +8,7 @@
             <%= link_to exhibition.title, exhibition_path(exhibition) %>
           </a>
         </h4>
+          <%= render 'crud_menus', exhibition: exhibition if current_user.own?(exhibition) %>
         <ul class="list-inline">
           <li class="list-inline-item">
             <%= exhibition.user.name %>
