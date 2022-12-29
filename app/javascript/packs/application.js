@@ -12,10 +12,12 @@ import "bootstrap";
 import "../stylesheets/application.scss";
 
 import '@fortawesome/fontawesome-free/js/all'
-import '../stylesheets/application.scss'
 
 import "./main.js";
 import "./common.js";
+
+import "jquery";
+import "popper.js";
 
 
 Rails.start()
