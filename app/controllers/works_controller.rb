@@ -12,6 +12,6 @@ class WorksController < ApplicationController
 
     private
     def work_params
-        params.require(:work).permit(:title, :work_image, :body).merge(exhibition_id: params[:exhibition_id])
+        params.require(:work).permit(:title, :body, :work_image, :work_image_cache).merge(exhibition_id: params[:exhibition_id])
     end
 end

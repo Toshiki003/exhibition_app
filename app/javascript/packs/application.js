@@ -10,8 +10,8 @@ import "channels"
 
 import "bootstrap";
 import "../stylesheets/application.scss";
-import '@fortawesome/fontawesome-free/js/all';
-import './main.js';
+import "@fortawesome/fontawesome-free/js/all";
+import "./main.js";
 
 
 Rails.start()
