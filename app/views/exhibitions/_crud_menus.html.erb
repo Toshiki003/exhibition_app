@@ -1,12 +1,12 @@
 <ul class='crud-menu-btn list-inline float-right'>
   <li class="list-inline-item">
     <%= link_to edit_exhibition_path(exhibition), id: "button-edit-#{exhibition.id}" do %>
-      <%= icon 'fa', 'pen' %>
+      <i class="fas fa-edit"></i>
     <% end %>
   </li>
   <li class="list-inline-item">
-    <%= link_to exhibition_path(exhibition), id: "button-delete-#{exhibition.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') } do %>
-      <%= icon 'fas', 'trash' %>
+    <%= link_to exhibition_path(exhibition), id: "button-delete-#{exhibition.id}", method: :delete, data: { confirm: "個展を削除しますか？"} do %>
+      <i class="fas fa-trash-alt"></i>
     <% end %>
   </li>
 </ul>

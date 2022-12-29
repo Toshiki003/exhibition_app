@@ -2,10 +2,9 @@ class WorksController < ApplicationController
     def create
         work = current_user.works.build(work_params)
         if work.save
-            redirect_to my_exhibition_exhibitions_path, success: "作品を投稿しました"
+            redirect_to exhibition_path(params[:exhibition_id]), success: "作品を投稿しました"
         else
-            flash.now[:danger] = "作品を投稿できませんでした"
-            render :new
+            redirect_to exhibition_path(params[:exhibition_id]), danger: "作品を投稿できませんでした"
         end
     end
 

@@ -1,23 +1,25 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="board-id-<%= exhibition.id %>">
     <div class="card">
-      <%= image_tag 'rabit.png', class: 'card-img-top', size: '300x200' %>
+      <%= image_tag 'Nowloading.png', class: 'card-img-top', size: '500x500' %>
       <div class="card-body">
         <h4 class="card-title">
-          <a href="#">
             <%= link_to exhibition.title, exhibition_path(exhibition) %>
-          </a>
         </h4>
+        <% if logged_in? %>
           <%= render 'crud_menus', exhibition: exhibition if current_user.own?(exhibition) %>
+        <% end %>
         <ul class="list-inline">
           <li class="list-inline-item">
+            <i class="far fa-user"></i>
             <%= exhibition.user.name %>
           </li>
           <li class="list-inline-item">
+            <i class="fas fa-calendar-alt"></i>
             <%= l exhibition.created_at, format: :long %>
           </li>
         </ul>
-        <p class="card-text"><%= exhibition.description %></p>
+        <p class="card-text"><%= simple_format(exhibition.description) %></p>
       </div>
     </div>
   </div>
