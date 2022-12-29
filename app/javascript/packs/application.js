@@ -10,7 +10,10 @@ import "channels"
 
 import "bootstrap";
 import "../stylesheets/application.scss";
-import "@fortawesome/fontawesome-free/js/all";
+
+import '@fortawesome/fontawesome-free/js/all'
+import '../stylesheets/application.scss'
+
 import "./main.js";
 import "./common.js";
 

@@ -1,17 +1,7 @@
-<tr id="work-<%= work.id %>">
-  <td style="width: 60px">
-    <%= image_tag work.work_image.url, size: '800x500' %>
-  </td>
-  <td>
-    <h3 class="small"><%= work.user.name %></h3>
-    <div id="js-work-<%= work.id %>">
-      <%= simple_format(work.body) %>
-    </div>
-    <div id="js-textarea-work-box-<%= work.id %>" style="display: none;">
-      <textarea id="js-textarea-work-<%= work.id %>" class="form-control mb-1"><%= work.body %></textarea>
-      <button class="btn btn-light js-button-edit-work-cancel" data-work-id="<%= work.id %>">キャンセル</button>
-      <button class="btn btn-success js-button-work-update" data-work-id="<%= work.id %>">更新</button>
-    </div>
-  </td>
-
-</tr>
+<div id="work-<%= work.id %>" class="card mb-3">
+  <%= image_tag work.work_image.url, class:"card-img-top", size: '800x500' %>
+  <div class="card-body">
+    <h5 class="card-title"><%= simple_format(work.body) %></h5>
+    <p class="card-text"><small class="text-muted">by  <%= work.user.name %></small></p>
+  </div>
+</div>
