@@ -3,7 +3,7 @@
     <%= form_with model: work, url: [exhibition, work], local: true do |f| %>
         <div class="form-group">
             <%= f.label :work_image %>
-            <%= f.file_field :work_image, class: 'form-control mb-3', accept: 'image/*' %>
+            <%= f.file_field :work_image, onchange: 'previewImage()', class: 'form-control mb-3', accept: 'image/*' %>
             <%= f.hidden_field :work_image_cache %>
         </div>
 
