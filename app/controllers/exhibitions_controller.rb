@@ -7,6 +7,7 @@ class ExhibitionsController < ApplicationController
 
   def new
     @exhibition = Exhibition.new
+    @work = Work.new
   end
 
   def create
@@ -20,7 +21,10 @@ class ExhibitionsController < ApplicationController
   end
 
   def show
-    @exhibition = current_user.exhibitions.find(params[:id])
+    @exhibition = Exhibition.find(params[:id])
+    # ここに@workも作って見られるようにする
+    @work = Work.new
+    @works = @exhibition.works.includes(:user).order(created_at: :desc)
   end
 
   def my_exhibition

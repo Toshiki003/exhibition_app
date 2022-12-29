@@ -2,10 +2,12 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
+
       <%= link_to root_path, class:"logo d-flex align-items-center  me-auto me-lg-0" do %>
         <i class="bi bi-camera"></i>
         <h1>PhotoUp!</h1>
       <% end %>
+
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -32,6 +34,9 @@
           <li><a href="services.html">マイページ</a></li>
           <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
         </ul>
+
       </nav><!-- .navbar -->
-      
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
   </header><!-- End Header -->
