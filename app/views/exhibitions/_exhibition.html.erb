@@ -1,7 +1,9 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="board-id-<%= exhibition.id %>">
     <div class="card">
-      <%= image_tag 'Nowloading.png', class: 'card-img-top', size: '500x500' %>
+      <%= link_to exhibition_path(exhibition) do %>
+        <%= image_tag 'Nowloading.png', class: 'card-img-top', size: '500x500' %>
+      <% end %>
       <div class="card-body">
         <h4 class="card-title">
             <%= link_to exhibition.title, exhibition_path(exhibition) %>
