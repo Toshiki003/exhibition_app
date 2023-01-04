@@ -10,7 +10,10 @@ Rails.application.routes.draw do
     collection do
       get :my_exhibition
     end
+    collection do
+      get :bookmarks
+    end
     resources :works, only: %i[create], shallow: true
   end
-
+  resources :bookmarks, only: %i[create destroy]
 end
