@@ -1,0 +1,14 @@
+<div class="container pt-3">
+    <!-- 掲示板一覧 -->
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <% if @bookmarks_exhibitions.present? %>
+            <%= render @bookmarks_exhibitions %>
+          <% else %>
+            <p><%= "お気に入りの個展はまだありません" %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>

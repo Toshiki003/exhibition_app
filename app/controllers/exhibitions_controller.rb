@@ -47,6 +47,10 @@ class ExhibitionsController < ApplicationController
     @my_exhibitions = current_user.exhibitions
   end
 
+  def bookmarks
+    @bookmarks_exhibitions = current_user.bookmarks_exhibitions.includes(:user).order(created_at: :desc)
+  end
+
   private 
   def exhibition_params
     params.require(:exhibition).permit(:title, :description)

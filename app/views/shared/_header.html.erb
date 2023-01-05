@@ -14,16 +14,7 @@
           <li><%= link_to '個展を開く', new_exhibition_path %></li>
           <li><%= link_to '個展一覧', exhibitions_path %></li>
           <li><%= link_to '開催した個展', my_exhibition_exhibitions_path %></li>
-          <li class="dropdown"><a href="#"><span>お気に入り(リリース予定)</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="gallery.html">Nature</a></li>
-              <li><a href="gallery.html">People</a></li>
-              <li><a href="gallery.html">Architecture</a></li>
-              <li><a href="gallery.html">Animals</a></li>
-              <li><a href="gallery.html">Sports</a></li>
-              <li><a href="gallery.html">Travel</a></li>
-            </ul>
-          </li>
+          <li><%= link_to 'お気に入り', bookmarks_exhibitions_path %></li>
           <%# <li><a href="services.html">マイページ</a></li> %>
           <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
         </ul>
