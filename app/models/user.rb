@@ -17,4 +17,16 @@ class User < ApplicationRecord
   def own?(object)
     id == object.user_id
   end
+
+  def bookmark(exhibition)
+    bookmarks_exhibitions << exhibition
+  end
+
+  def unbookmark(exhibition)
+    bookmarks_exhibitions.destroy(exhibition)
+  end
+
+  def bookmark?(exhibition)
+    bookmarks_exhibitions.include?(exhibition)
+  end
 end
