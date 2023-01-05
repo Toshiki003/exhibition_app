@@ -8,8 +8,11 @@
         <h4 class="card-title">
             <%= link_to exhibition.title, exhibition_path(exhibition) %>
         </h4>
-        <% if logged_in? %>
-          <%= render 'crud_menus', exhibition: exhibition if current_user.own?(exhibition) %>
+
+        <% if current_user.own?(exhibition) %>
+          <%= render 'crud_menus', exhibition: exhibition  %>
+        <% else %>
+          <%= render 'bookmark_button', exhibition: exhibition %>
         <% end %>
         <ul class="list-inline">
           <li class="list-inline-item">
