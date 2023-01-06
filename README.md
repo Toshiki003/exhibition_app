@@ -1,24 +1,26 @@
-# README
+# PhotoUp!（フォタップ） -オンライン個展を開こう-
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![image](https://user-images.githubusercontent.com/110599239/210942035-fe226af8-1bf5-4dbe-b187-9d42eed71ede.png)
 
-Things you may want to cover:
+https://exhibition.magia.runteq.jp/
 
-* Ruby version
+## サービス概要
+スマホが替わっても写真を引き継いで保存。気づけばたくさんの写真が、見返すこともなくたまっている方も多いのではないでしょうか。
+PhotoUp!(フォタップ)では手軽に個展を開くことができます。
+インスタグラムに載せるにはちょっと古い、でも誰かと共有したい過去の写真がある、そんな方におすすめです。
 
-* System dependencies
+## 主な機能
+・ユーザー登録・ログイン・ログアウト機能
 
-* Configuration
+・個展の新規作成・編集・削除機能
 
-* Database creation
+・個展内の写真投稿機能
 
-* Database initialization
+・お気に入り登録機能
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## 今後実装予定
+・ 個展サムネイル表示
+・ 検索機能
+・ コメント機能
 
-* Deployment instructions
-
-* ...
