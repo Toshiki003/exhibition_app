@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: mysql2_production
-  username: mysql2
-  password: <%= ENV['MYSQL2_DATABASE_PASSWORD'] %>
+  database: clclzzn1t001pbwqu3b0x1u3b
+  username: clclzzn1s001nbwquceclat2j
+  password: <%= ENV['EXHIBITION_APP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
