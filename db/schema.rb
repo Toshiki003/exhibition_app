@@ -12,9 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2023_01_04_224030) do
 
-  create_table "bookmarks", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "exhibition_id", null: false
+  create_table "bookmarks", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "exhibition_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["exhibition_id"], name: "index_bookmarks_on_exhibition_id"
@@ -22,16 +22,16 @@ ActiveRecord::Schema.define(version: 2023_01_04_224030) do
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
-  create_table "exhibitions", force: :cascade do |t|
+  create_table "exhibitions", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title", null: false
     t.string "description"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_exhibitions_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
     t.string "salt"
@@ -41,12 +41,12 @@ ActiveRecord::Schema.define(version: 2023_01_04_224030) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  create_table "works", force: :cascade do |t|
+  create_table "works", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
     t.string "work_image"
     t.string "body"
-    t.integer "user_id", null: false
-    t.integer "exhibition_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "exhibition_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["exhibition_id"], name: "index_works_on_exhibition_id"

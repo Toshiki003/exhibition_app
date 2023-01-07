@@ -18,8 +18,9 @@
 
         <!-- ここから下に、commentsのような感じで、workのフォームを入れ込む -->
         <% if logged_in? %>
-        <%= render partial: 'works/form', locals: { exhibition: @exhibition, work: @work } if current_user.own?(@exhibition) %>
+          <%= render partial: 'works/form', locals: { exhibition: @exhibition, work: @work } if current_user.own?(@exhibition) %>
         <% end %>
+
         <!-- ここから下は、多分JSのsliderなるものが必要。MVPリリース後に実装予定 -->
         <%# <div class="position-relative h-100">
           <div class="slides-1 portfolio-details-slider swiper">

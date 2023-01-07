@@ -22,7 +22,6 @@ class ExhibitionsController < ApplicationController
 
   def show
     @exhibition = Exhibition.find(params[:id])
-    # ここに@workも作って見られるようにする
     @work = Work.new
     @works = @exhibition.works.includes(:user).order(created_at: :desc)
   end

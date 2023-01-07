@@ -1,6 +1,6 @@
 <div class="row mb-3">
   <div class="col-lg-8 offset-lg-2">
-    <%= form_with model: work, url: [exhibition, work], local: true do |f| %>
+    <%= form_with model: work, url: exhibition_works_path(exhibition, work), local: true do |f| %>
         <div class="form-group">
             <%= f.label :work_image %>
             <%= f.file_field :work_image, onchange: 'previewImage()', class: 'form-control mb-3', accept: 'image/*' %>

@@ -7,6 +7,8 @@
       <div class="card-body">
         <h4 class="card-title">
             <%= link_to exhibition.title, exhibition_path(exhibition) %>
+            <%# お試しで↓ここに入れて確認中 %>
+            <%# ここまで%>
         </h4>
 
         <% if current_user.own?(exhibition) %>

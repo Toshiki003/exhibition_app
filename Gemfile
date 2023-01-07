@@ -6,7 +6,8 @@ ruby '3.1.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# gem 'sqlite3', '~> 1.4'
+gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -30,11 +31,10 @@ gem 'annotate'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'enum_help'
 gem 'rails-i18n'
-
 gem 'sorcery', '0.16.4'
 gem 'faker'
-
 gem 'rails-ujs'
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -69,3 +69,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem "carrierwave", "~> 2.2"
 
 gem "mini_magick", "~> 4.12"
+
+gem "pry", "~> 0.14.1"
+
+gem "pry-rails", "~> 0.3.9"
