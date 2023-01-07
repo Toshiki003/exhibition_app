@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'annotate'
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -35,6 +36,7 @@ gem 'sorcery', '0.16.4'
 gem 'faker'
 gem 'rails-ujs'
 gem 'dotenv-rails'
+gem 'ransack', '2.3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
