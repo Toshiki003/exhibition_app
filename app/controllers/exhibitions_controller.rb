@@ -3,7 +3,8 @@ class ExhibitionsController < ApplicationController
   before_action :set_exhibition, only: %i[edit update destroy]
   
   def index
-    @exhibitions = Exhibition.all.includes(:user).order(created_at: :desc)
+    @q = Exhibition.ransack(params[:q])
+    @exhibitions = @q.result(distinct: true).includes(:user).order(created_at: :desc)
   end
 
   def new
@@ -43,7 +44,8 @@ class ExhibitionsController < ApplicationController
   end
 
   def my_exhibition
-    @my_exhibitions = current_user.exhibitions
+    @q = current_user.exhibitions.ransack(params[:q])
+    @my_exhibitions = @q.result(distinct: true).includes(:user).order(created_at: :desc)
   end
 
   def bookmarks

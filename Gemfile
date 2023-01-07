@@ -35,6 +35,7 @@ gem 'sorcery', '0.16.4'
 gem 'faker'
 gem 'rails-ujs'
 gem 'dotenv-rails'
+gem 'ransack', '2.3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
