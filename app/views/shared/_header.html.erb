@@ -11,11 +11,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><%= link_to '個展を開く', new_exhibition_path %></li>
+          <li><%= link_to '個展を開く', new_exhibition_path , class: "active" %></li>
           <li><%= link_to '個展一覧', exhibitions_path %></li>
           <li><%= link_to '開催した個展', my_exhibition_exhibitions_path %></li>
           <li><%= link_to 'お気に入り', bookmarks_exhibitions_path %></li>
-          <%# <li><a href="services.html">マイページ</a></li> %>
           <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
         </ul>
 
