@@ -9,7 +9,7 @@
             <%= link_to exhibition.title, exhibition_path(exhibition) %>
        </h4>
 
-        <% if current_user.own?(exhibition) %>
+        <% if current_user&.own?(exhibition) %>
           <%= render 'crud_menus', exhibition: exhibition  %>
         <% else %>
           <%= render 'bookmark_button', exhibition: exhibition %>
